@@ -1,0 +1,52 @@
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(16, 170, 16);
+}
+
+#description {
+  color: rgb(74, 133, 221);
+}
+
+#rules {
+  color: rgb(74, 133, 221);
+}
+
+#enjoy {
+  color: rgb(74, 133, 221);
+}
+
+p:nth-child() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+p:nth-child() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+}
+
+#barDiv {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+#barOne {
+  width: 100px;
+  height: 50px;
+  background-color: cyan;
+  color: black;
+}
+
+#barTwo {
+  width: 100px;
+  height: 50px;
+  background-color: greenyellow;
+  color: black;
+}
