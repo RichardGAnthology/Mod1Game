@@ -14,15 +14,16 @@ let playerOneScore = 0
 let playerTwoScore = 0
 let gameOver= false
 
+
 function getData(symbolsTest){
     //let symbolsTest = event.target.value;
-    console.log("fetchInitiated")
-    console.time("fetchTime")
+    //console.log("fetchInitiated")
+    //console.time("fetchTime")
     let api = "https://api.twelvedata.com/time_series?"
     +"symbol="
     +symbolsTest
-    +",&interval=1min&outputsize=1&apikey=yourAPIkey" 
-    console.log(api)
+    +",&interval=1min&outputsize=1&apikey=a18145a301e54e0bab5c05d5c419c6f4" 
+    //console.log(api)
     //searching the ulr's "database" with the parameters I set
     fetch(api) 
     //taking the response
@@ -31,8 +32,8 @@ function getData(symbolsTest){
         return response.json();
         //making the formatted response "data"
     }).then((data)=>{ 
-        console.log(data)
-        console.log("testingFetch")
+       // console.log(data)
+       // console.log("testingFetch")
         //console.timeEnd("fetchTime")
         //displaying the data
         displayData(data)
@@ -44,10 +45,10 @@ function onSubmit(){
     event.preventDefault()
     //making variable symbolsTest into a joined version of the symbols picked by the user
     let symbolsTest = getSymbols().join()
-    console.log(symbolsTest)
+    //console.log(symbolsTest)
     //the getData function runs on the symbols picked (fetched, formatted, etc)
     getData(symbolsTest)
-    console.log("testingonSubmit")
+    //console.log("testingonSubmit")
 }
 
 function displayData(data){
@@ -80,25 +81,45 @@ function displayData(data){
             console.log("Sorry, data not here yet.")
         }
     }
-    if(firstStock>secondStock){
-        setTimeout(function() { alert("Congratulations, player 1 won!"); }, 3000);
-        playerOneScore++
+    console.log(firstStock+"firststock")
+    console.log(secondStock+"secondstock")
+    
+    if(parseInt(firstStock)>parseInt(secondStock)){
+
+        setTimeout(function() { alert("Congratulations, player 1 won the round!"); }, 3000);
+
+        playerOneScore++;
+
+        console.log(playerOneScore+"player1score")
+
         document.getElementById("PlayerOneScore").innerText=playerOneScore
-        if(playerOneScore==2){
-            setTimeout(function() { alert("Player one has won the game"); }, 3000);
-            
-        }
-    }
-    else{
+
+    
+    
+}
+
+    else {
+        
+        
+        console.log(secondStock+"elsesecondstock")
         setTimeout(function() { alert("Congratulations, player 2 won!"); }, 3000);
         playerTwoScore++
+        console.log(playerTwoScore+"player2score")
         document.getElementById("PlayerTwoScore").innerText=playerTwoScore
+}
+    if(playerOneScore==2){
+        setTimeout(function() { alert("Player one has won the game."); }, 3000);
+    }
         if(playerTwoScore==2){
             setTimeout(function() { alert("Player two has won the game"); }, 3000);
         }
-        
-    }
-}
+        // else{
+        //     setTimeout(function() { alert("Please reset the game"); }, 4000)
+          }      // }
+console.log(firstStock+"initiatelized firststock")
+console.log(secondStock+"initiatelized secondstock")
+console.log(firstStockArray+"first array")
+console.log(secondStockArray+"second array")
 
 
 setInterval(() => {

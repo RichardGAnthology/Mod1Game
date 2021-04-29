@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="html2style.css">
+    <link rel="stylesheet" href="../css/html2style.css">
     <title>Document</title>
-    <script src="scripts.js" defer> </script>
+    <script src="../js/scripts.js" defer> </script>
 </head>
 
 <body>
@@ -15,14 +15,10 @@
     <a href="index.html">Race Again</a>
 
     <form action="race.html" method="GET" onsubmit="onSubmit()">
-        <!-- <div>
-            <label for="username">Player 1</label>
-            <input type="text" class="form" id="username" name="username" placeholder="Please enter your name"> 
-        </div> -->
         <br>
         <div id=playerOneList>
             <label for="symbol">Player one will choose:</label>
-            <select  class="form" id="secondSymbol" name="firstSymbol" placeholder="Please select a stock"> 
+            <select  class="form" id="firstSymbol" name="firstSymbol" placeholder="Please select a stock"> 
                 <option value="PEP">Pepsi</option>
                 <option value="KO">Coca-Cola</option>
                 <option value="AAPL">Apple</option>
@@ -52,15 +48,11 @@
             </select>
         </div>
         <br>
-        <!-- <div>
-            <label for="username">Player 2</label>
-            <input type="text" class="form" id="username" name="username2" placeholder="Please enter your name"> 
-        </div> -->
         <br>
        <div id="listContainer">
         <div id=playerTwoList>
             <label for="symbol">Player two will choose:</label>
-            <select  class="form" id="firstSymbol" name="secondSymbol" placeholder="Please select a stock"> 
+            <select  class="form" id="secondSymbol" name="secondSymbol" placeholder="Please select a stock"> 
                 <option value="PEP">Pepsi</option>
                 <option value="KO">Coca-Cola</option>
                 <option value="AAPL">Apple</option>
@@ -91,27 +83,10 @@
         </div>
     </div> 
 
-        <div>
-            <!-- <label for= "time">5 Minute Race</label>
-            <input type="radio" name="racetime" id="5minutes" value="5"></input>
-        </div>
-        <div>
-            <label for= "time">10 Minute Race</label>
-            <input type="radio" name="racetime" id="10minutes" value="10">
-        </div>
-        <div>
-            <label for= "time">15 Minute Race</label>
-            <input type="radio" name="racetime" id="15minutes" value="15">
-        </div>
-
-        <div> -->
             <br>
             <input type="submit">
         </div>
  </form>
-    
- <!--<h3>seconds left: <span id="time-left">10</span></h3>
- <button id="start-button">start</button>-->
 
 <br>
 <br>
@@ -137,49 +112,6 @@ document.getElementById("ResetButton").addEventListener("click",function(){
     location.reload();
     return false;
 })
-
-        /*this allows me to replace the content of the div id'd "race"
-        const raceInfo = document.getElementById("race")
-        //this allows me to create a new url with the query strings attached to it from the previous file.
-        new URLSearchParams(window.location.search).
-        //the query strings will have the information from the values and names attached to them.
-        forEach((value,name) => {
-
-            //this will append the name and value so it's more readable and will create a break between them.
-            //raceInfo.append(`${name}: ${value}`)
-            //raceInfo.append(document.createElement('br'))
-            document.getElementById("race").innerHTML+="<p>"+name+":"+value+"</p>"
-        })
-/*function getData(){
-//let symbol = document.getElementById("firstSymbol").value
-//let symbol = document.getElementsByName("firstSymbol"+","+"secondSymbol")
-
-//let api = "https://api.twelvedata.com/time_series?symbol=PEP,KO,&interval=1min&outputsize=1&apikey=a18145a301e54e0bab5c05d5c419c6f4"
-
-//let api = "https://api.twelvedata.com/time_series?symbol=
-//console.log(api)
-//"+symbol="
-//+firstSymbol
-//+","
-//+secondSymbol
-//",&interval=1min&outputsize=1&apikey=a18145a301e54e0bab5c05d5c419c6f4" 
-
-fetch(api)
-.then((data)=> {
-       let formattedData = data.json()
-    }).then((formattedData)=>{
-        console.log(formattedData)
-        //displayData(formmatedData)
-})
-.catch((error) => console.log(error))
-}
-/*function displayData(data){
-      document.getElementById("div1").innerHTML = ""
-      for (let i=0; i<data.length; i++){
-      document.getElementById("div1").innerHTML += "<p>"+data[i].open+"</p>"
-    }
-}
-getData()*/
 </script>
 </body>
 </html>

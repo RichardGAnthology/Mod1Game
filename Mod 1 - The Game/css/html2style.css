@@ -14,13 +14,6 @@ html {
   }
 }
 
-/* p:nth-child(1) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: red; 
-}*/
-
 p:nth-child() {
   display: flex;
   justify-content: center;
@@ -54,9 +47,3 @@ p:nth-child() {
   justify-content: flex-start;
   align-items: center;
 }
-
-/* #playerTwoList {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-} */
