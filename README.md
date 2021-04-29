@@ -8,4 +8,6 @@ The point of this game is in part, to inform those who play about how much it wo
 It's a game where you two players face-off against eachother in a stake-free environment.
 After two won rounds, a winner will be selected. The beauty of this program, is that because it is live, one particular stock won't always be the best stock to win.
 
+Technologies used include but are not limited to: HTML, CSS, Javascript.
+
 Hope you all enjoy!

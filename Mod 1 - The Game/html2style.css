@@ -14,12 +14,12 @@ html {
   }
 }
 
-p:nth-child(1) {
+/* p:nth-child(1) {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: red;
-}
+  color: red; 
+}*/
 
 p:nth-child() {
   display: flex;
@@ -48,3 +48,15 @@ p:nth-child() {
   background-color: greenyellow;
   color: black;
 }
+
+#listContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* #playerTwoList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+} */

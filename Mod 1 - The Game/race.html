@@ -20,9 +20,9 @@
             <input type="text" class="form" id="username" name="username" placeholder="Please enter your name"> 
         </div> -->
         <br>
-        <div>
+        <div id=playerOneList>
             <label for="symbol">Player one will choose:</label>
-            <select  class="form" id="firstSymbol" name="firstSymbol" placeholder="Please select a stock"> 
+            <select  class="form" id="secondSymbol" name="firstSymbol" placeholder="Please select a stock"> 
                 <option value="PEP">Pepsi</option>
                 <option value="KO">Coca-Cola</option>
                 <option value="AAPL">Apple</option>
@@ -57,9 +57,10 @@
             <input type="text" class="form" id="username" name="username2" placeholder="Please enter your name"> 
         </div> -->
         <br>
-        <div>
+       <div id="listContainer">
+        <div id=playerTwoList>
             <label for="symbol">Player two will choose:</label>
-            <select  class="form" id="secondSymbol" name="secondSymbol" placeholder="Please select a stock"> 
+            <select  class="form" id="firstSymbol" name="secondSymbol" placeholder="Please select a stock"> 
                 <option value="PEP">Pepsi</option>
                 <option value="KO">Coca-Cola</option>
                 <option value="AAPL">Apple</option>
@@ -88,6 +89,7 @@
                 <option value="SQ">Square</option>
             </select>
         </div>
+    </div> 
 
         <div>
             <!-- <label for= "time">5 Minute Race</label>
@@ -126,8 +128,8 @@
 </div>
 
 
-<div id= "PlayerOneScore">Player One Score:</div>
-<div id= "PlayerTwoScore">Player Two Score:</div>
+<div id= "PlayerOneScore"></div>
+<div id= "PlayerTwoScore"></div>
 
 <script>
 
