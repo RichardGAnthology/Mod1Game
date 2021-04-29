@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+  /* max-height: 600px; */
+  width: 1000px;
+  background-color: rgb(238, 231, 202);
+  background-image: url("http://assets.stickpng.com/images/580b585b2edbce24c47b288d.png");
+  animation: 120s leStocks infinite linear;
+}
+
+@keyframes leStocks {
+  100% {
+    background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%,
+      400px 0;
+  }
+}
+
+p:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+}
+
+p:nth-child() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: blue;
+}
+
+#barDiv {
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+#barOne {
+  background-image: url();
+  width: 100px;
+  height: 50px;
+  background-color: cyan;
+  color: black;
+}
+
+#barTwo {
+  width: 100px;
+  height: 50px;
+  background-color: greenyellow;
+  color: black;
+}

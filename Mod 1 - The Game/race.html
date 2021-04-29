@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="html2style.css">
     <title>Document</title>
     <script src="scripts.js" defer> </script>
 </head>
@@ -15,13 +15,13 @@
     <a href="index.html">Race Again</a>
 
     <form action="race.html" method="GET" onsubmit="onSubmit()">
-        <div>
+        <!-- <div>
             <label for="username">Player 1</label>
             <input type="text" class="form" id="username" name="username" placeholder="Please enter your name"> 
-        </div>
+        </div> -->
         <br>
         <div>
-            <label for="symbol">Stock to "race" with:</label>
+            <label for="symbol">Player one will choose:</label>
             <select  class="form" id="firstSymbol" name="firstSymbol" placeholder="Please select a stock"> 
                 <option value="PEP">Pepsi</option>
                 <option value="KO">Coca-Cola</option>
@@ -35,16 +35,30 @@
                 <option value="NFLX">Netflix</option>
                 <option value="COST">Costco</option>
                 <option value="SBUX">Starbucks</option>
+                <option value="PYPL">PayPal</option>
+                <option value="ADBE">Adobe</option>
+                <option value="AMD">Advanced Micro Devices Inc</option>
+                <option value="MNST">Monster Beverage Corp</option>
+                <option value="KHC">Kraft Heinz Co/The</option>
+                <option value="LULU">Lululemon Athletica Inc</option>
+                <option value="EBAY">eBay Inc</option>
+                <option value="DLTR">Dollar Tree Inc</option>
+                <option value="PTON">Peloton Interactive Inc</option>
+                <option value="FOX">Fox Corp</option>
+                <option value="IRBT">iRobot</option>
+                <option value="FVRR">Fiverr</option>
+                <option value="BYND">Beyond Meat</option>
+                <option value="SQ">Square</option>
             </select>
         </div>
         <br>
-        <div>
+        <!-- <div>
             <label for="username">Player 2</label>
             <input type="text" class="form" id="username" name="username2" placeholder="Please enter your name"> 
-        </div>
+        </div> -->
         <br>
         <div>
-            <label for="symbol">Stock to "race" with:</label>
+            <label for="symbol">Player two will choose:</label>
             <select  class="form" id="secondSymbol" name="secondSymbol" placeholder="Please select a stock"> 
                 <option value="PEP">Pepsi</option>
                 <option value="KO">Coca-Cola</option>
@@ -58,6 +72,20 @@
                 <option value="NFLX">Netflix</option>
                 <option value="COST">Costco</option>
                 <option value="SBUX">Starbucks</option>
+                <option value="PYPL">PayPal</option>
+                <option value="ADBE">Adobe</option>
+                <option value="AMD">Advanced Micro Devices Inc</option>
+                <option value="MNST">Monster Beverage Corp</option>
+                <option value="KHC">Kraft Heinz Co/The</option>
+                <option value="LULU">Lululemon Athletica Inc</option>
+                <option value="EBAY">eBay Inc</option>
+                <option value="DLTR">Dollar Tree Inc</option>
+                <option value="PTON">Peloton Interactive Inc</option>
+                <option value="FOX">Fox Corp</option>
+                <option value="IRBT">iRobot</option>
+                <option value="FVRR">Fiverr</option>
+                <option value="BYND">Beyond Meat</option>
+                <option value="SQ">Square</option>
             </select>
         </div>
 
@@ -75,6 +103,7 @@
         </div>
 
         <div> -->
+            <br>
             <input type="submit">
         </div>
  </form>
@@ -82,17 +111,31 @@
  <!--<h3>seconds left: <span id="time-left">10</span></h3>
  <button id="start-button">start</button>-->
 
-
+<br>
+<br>
 <div id=barDiv>
     <div id="barOne"> <span id="result1"> Stock 1 </span> </div>
     <div id="barTwo"> <span id="result2"> Stock 2 </span> </div>
 </div>
 
 
+<br>
+<br>
+<div id="resetGame">
+    <button id="ResetButton">Play Again!</button>
+</div>
 
 
+<div id= "PlayerOneScore">Player One Score:</div>
+<div id= "PlayerTwoScore">Player Two Score:</div>
 
 <script>
+
+document.getElementById("ResetButton").addEventListener("click",function(){
+    location.reload();
+    return false;
+})
+
         /*this allows me to replace the content of the div id'd "race"
         const raceInfo = document.getElementById("race")
         //this allows me to create a new url with the query strings attached to it from the previous file.

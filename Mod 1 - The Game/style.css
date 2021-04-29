@@ -17,36 +17,69 @@
   color: rgb(74, 133, 221);
 }
 
-p:nth-child() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: red;
+html {
+  background-color: rgb(241, 209, 173);
 }
 
-p:nth-child() {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: blue;
+.flyingMoney {
+  position: absolute;
+  animation: flyingMoney linear 1s infinite;
 }
 
-#barDiv {
-  display: block;
-  justify-content: center;
-  align-items: center;
+@keyframes flyingMoney {
+  0% {
+    left: 920px;
+    bottom: 590px;
+  }
+  25% {
+    left: 920px;
+    bottom: 620px;
+  }
+  50% {
+    left: 920px;
+    bottom: 640px;
+  }
+  75% {
+    left: 920px;
+    bottom: 620px;
+  }
+  100% {
+    left: 920px;
+    bottom: 590px;
+  }
+}
+.flyingMoneyReverse {
+  transform: scaleX(-1);
+  position: absolute;
+  animation: flyingMoneyReverse linear 1s infinite;
 }
 
-#barOne {
-  width: 100px;
-  height: 50px;
-  background-color: cyan;
-  color: black;
+@keyframes flyingMoneyReverse {
+  0% {
+    left: 320px;
+    bottom: 590px;
+  }
+  25% {
+    left: 320px;
+    bottom: 620px;
+  }
+  50% {
+    left: 320px;
+    bottom: 640px;
+  }
+  75% {
+    left: 320px;
+    bottom: 620px;
+  }
+  100% {
+    left: 320px;
+    bottom: 590px;
+  }
 }
 
-#barTwo {
-  width: 100px;
-  height: 50px;
-  background-color: greenyellow;
-  color: black;
+.bear {
+  position: absolute;
+  transform: scaleX(-1);
+  bottom: 100px;
+  left: 200px;
 }

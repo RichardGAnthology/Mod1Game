@@ -10,7 +10,9 @@ let firstStockArray = []
 let secondStockArray = []
 let fetchInterval;
 let fetchLimit=0
-
+let playerOneScore = 0
+let playerTwoScore = 0
+let gameOver= false
 
 function displayData(data){
     let i = 0
@@ -37,11 +39,21 @@ function displayData(data){
         }
     }
     if(firstStock>secondStock){
-        setTimeout(function() { alert("Congratulations, player 2 won!"); }, 300);
-        
+        setTimeout(function() { alert("Congratulations, player 2 won!"); }, 3000);
+        playerOneScore++
+        document.getElementById("PlayerOneScore").innerText=playerOneScore
+        if(playerOneScore==2){
+            setTimeout(function() { alert("Player two has won the game"); }, 3000);
+            
+        }
     }
     else{
-        setTimeout(function() { alert("Congratulations, player 1 won!"); }, 300);
+        setTimeout(function() { alert("Congratulations, player 1 won!"); }, 3000);
+        playerTwoScore++
+        document.getElementById("PlayerTwoScore").innerText=playerTwoScore
+        if(playerTwoScore==2){
+            setTimeout(function() { alert("Player one has won the game"); }, 3000);
+        }
         
     }
 }
@@ -71,23 +83,37 @@ function onSubmit(){
     event.preventDefault()
     let symbolsTest = getSymbols().join()
     console.log(symbolsTest)
-    // getData(symbolsTest)
+    getData(symbolsTest)
     console.log("testingonSubmit")
     
-    fetchInterval = setInterval(()=> {
+    /*fetchInterval = setInterval(()=> {
         getData(symbolsTest) 
         fetchLimit++ 
         if(fetchLimit==2){
             clearInterval(fetchInterval)
         }
-    },100)
+    },1000)*/
 }
 
 
 setInterval(() => {
     document.getElementById("barOne").style.width = parseInt(firstStock)+"px"
     document.getElementById("barTwo").style.width = parseInt(secondStock)+"px"
-}, 500);
+}, 5000);
+
+
+function Restart(){
+
+}
+
+
+
+/*for(let playerOneScore=0;playerOneScore<=2;playerOneScore++){
+    if(PlayOnescore=2){
+        alert("Player One Won the game!")
+    }
+}
+*/
 
 //console.log(barOneTest)
 //console.log(barTwoTest)
@@ -109,14 +135,6 @@ setInterval(() => {
 
 //     startBtn.addEventListener('click', countDown)
 // })
-
-
-
-
-
-
-
-
 
 
 /* //console.log(data[stock].values[0].open)
