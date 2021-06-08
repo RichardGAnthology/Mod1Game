@@ -10,15 +10,16 @@
 </head>
 
 <body>
-    <div id="race"></div>
-    <div id="div1"></div>
-    <a href="index.html">Race Again</a>
+    <!-- <div id="race"></div> -->
+    
+    
+    
 
-    <form action="race.html" method="GET" onsubmit="onSubmit()">
-        <br>
+    
+    <form id = "listContainer" action="race.html" method="GET" onsubmit="onSubmit()">
         <div id=playerOneList>
             <label for="symbol">Player one will choose:</label>
-            <select  class="form" id="firstSymbol" name="firstSymbol" placeholder="Please select a stock"> 
+            <select class="form" id="firstSymbol" name="firstSymbol" placeholder="Please select a stock"> 
                 <option value="PEP">Pepsi</option>
                 <option value="KO">Coca-Cola</option>
                 <option value="AAPL">Apple</option>
@@ -47,9 +48,6 @@
                 <option value="SQ">Square</option>
             </select>
         </div>
-        <br>
-        <br>
-       <div id="listContainer">
         <div id=playerTwoList>
             <label for="symbol">Player two will choose:</label>
             <select  class="form" id="secondSymbol" name="secondSymbol" placeholder="Please select a stock"> 
@@ -81,30 +79,52 @@
                 <option value="SQ">Square</option>
             </select>
         </div>
-    </div> 
-
-            <br>
             <input type="submit">
+    </form>
+
+<!-- 2 -->
+    <div id="priceDisplayContainer">
+        <p>Prices of Stocks Will Display Below</p>
+        <div id="priceDisplay"></div>
+    </div>
+<!-- 3 -->
+    <img id="playerOne" width="200" src="../images/playerOne.png"> 
+<!-- 4 -->
+    <img id="playerTwo" width="200" src="../images/playerTwo.png">
+<!-- 5 -->
+    
+        <div> 
+            <div id="barOne"> <p> Stock 1 </p> </div>
         </div>
- </form>
+        
+            <div> 
+        <div id="barTwo"> <p> Stock 2 </p> </div>
+        </div>
+<!-- 6 -->
+    <div id="raceAgain"> 
+        <a href="index.html">Race Again</a>
+    </div>
+<!-- 7 -->
+    <div id="ResetButton" > 
+        <button >Play Again!</button>
+    </div>
+  
+<!-- 8 -->
+<div id="playerScores"> PlayerScores Div <p id= "PlayerOneScore"> </p>
+    <p id= "PlayerTwoScore"> </p>
+</div>
+   
 
-<br>
-<br>
-<div id=barDiv>
-    <div id="barOne"> <span id="result1"> Stock 1 </span> </div>
-    <div id="barTwo"> <span id="result2"> Stock 2 </span> </div>
+<!-- 9 -->
+
+    
+<div id="playerOneCoin">
+    <img width="70" src="../images/playerOneCoin.png">
 </div>
 
-
-<br>
-<br>
-<div id="resetGame">
-    <button id="ResetButton">Play Again!</button>
-</div>
-
-
-<div id= "PlayerOneScore"></div>
-<div id= "PlayerTwoScore"></div>
+<div id="playerTwoCoin">
+    <img width="70" src="../images/playerTwoCoin.png">
+</div> 
 
 <script>
 

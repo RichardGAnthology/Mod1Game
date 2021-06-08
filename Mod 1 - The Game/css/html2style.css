@@ -1,49 +1,60 @@
-html {
-  height: 100%;
-  /* max-height: 600px; */
-  width: 1000px;
-  background-color: rgb(238, 231, 202);
-  background-image: url("http://assets.stickpng.com/images/580b585b2edbce24c47b288d.png");
-  animation: 120s leStocks infinite linear;
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 5px 5px;
+  grid-template-areas:
+    "playerOne search search playerTwo"
+    "left left none none"
+    "coinOne test test test"
+    "coinTwo empty empty empty";
+  border-style: solid;
+  height: 100vh;
+  margin: 0%;
+  padding: 0.5%;
+  overflow: hidden;
 }
 
-@keyframes leStocks {
-  100% {
-    background-position: -5000px 20%, -800px 95%, 500px 50%, 1000px 100%,
-      400px 0;
-  }
-}
-
-p:nth-child() {
+#listContainer {
+  grid-area: search;
+  border-style: solid;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  color: blue;
 }
 
-#barDiv {
-  display: block;
-  justify-content: center;
+#playerOne {
+  left: 49%;
+  margin-top: 20%;
+  grid-area: playerOne;
+  border-style: solid;
+  max-width: max-content;
+  position: relative;
+}
+#playerTwo {
+  margin-top: 20%;
+  grid-area: playerTwo;
+  border-style: solid;
+  max-width: max-content;
+  position: relative;
+  transform: scaleX(-1);
+}
+
+#playerScores {
+  border-style: solid;
+}
+
+#barContainer {
+  border-style: solid;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 #barOne {
-  background-image: url();
-  width: 100px;
-  height: 50px;
-  background-color: cyan;
-  color: black;
+  background-color: chartreuse;
 }
 
 #barTwo {
-  width: 100px;
-  height: 50px;
-  background-color: greenyellow;
-  color: black;
-}
-
-#listContainer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  background-color: blue;
 }
