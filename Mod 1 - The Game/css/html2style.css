@@ -13,6 +13,8 @@ body {
   margin: 0%;
   padding: 0.5%;
   overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 
 #listContainer {
@@ -24,7 +26,7 @@ body {
 }
 
 #playerOne {
-  left: 49%;
+  justify-self: end;
   margin-top: 20%;
   grid-area: playerOne;
   border-style: solid;
@@ -32,6 +34,7 @@ body {
   position: relative;
 }
 #playerTwo {
+  justify-self: start;
   margin-top: 20%;
   grid-area: playerTwo;
   border-style: solid;
@@ -57,4 +60,8 @@ body {
 
 #barTwo {
   background-color: blue;
+}
+
+a{
+  color: yellow;
 }
