@@ -1,137 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/html2style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/html2style.css" />
     <title>Document</title>
-    <script src="../js/scripts.js" defer> </script>
-</head>
+    <script src="../js/scripts.js" defer></script>
+  </head>
 
-<body>
+  <body>
     <!-- <div id="race"></div> -->
-    
-    
-    
+    <div id="summary">
+      <h1>Again, the rules are as follow.</h1>
+      <p>
+        Player one will be a stock, and then player two will pick a stock. The
+        objective of this game is to pick the stock with the highest price. It's
+        a game of luck and memory!
+      </p>
+    </div>
 
-    
-    <form id = "listContainer" action="race.html" method="GET" onsubmit="onSubmit()">
-        <div id=playerOneList>
-            <label for="symbol">Player one will choose:</label>
-            <select class="form" id="firstSymbol" name="firstSymbol" placeholder="Please select a stock"> 
-                <option value="PEP">Pepsi</option>
-                <option value="KO">Coca-Cola</option>
-                <option value="AAPL">Apple</option>
-                <option value="MSFT">Microsoft</option>
-                <option value="AMZN">Amazon</option>
-                <option value="TSLA">Tesla</option>
-                <option value="GOOG">Google</option>
-                <option value="FB">Facebook</option>
-                <option value="NVDA">NVIDIA</option>
-                <option value="NFLX">Netflix</option>
-                <option value="COST">Costco</option>
-                <option value="SBUX">Starbucks</option>
-                <option value="PYPL">PayPal</option>
-                <option value="ADBE">Adobe</option>
-                <option value="AMD">Advanced Micro Devices Inc</option>
-                <option value="MNST">Monster Beverage Corp</option>
-                <option value="KHC">Kraft Heinz Co/The</option>
-                <option value="LULU">Lululemon Athletica Inc</option>
-                <option value="EBAY">eBay Inc</option>
-                <option value="DLTR">Dollar Tree Inc</option>
-                <option value="PTON">Peloton Interactive Inc</option>
-                <option value="FOX">Fox Corp</option>
-                <option value="IRBT">iRobot</option>
-                <option value="FVRR">Fiverr</option>
-                <option value="BYND">Beyond Meat</option>
-                <option value="SQ">Square</option>
-            </select>
-        </div>
-        <div id=playerTwoList>
-            <label for="symbol">Player two will choose:</label>
-            <select  class="form" id="secondSymbol" name="secondSymbol" placeholder="Please select a stock"> 
-                <option value="PEP">Pepsi</option>
-                <option value="KO">Coca-Cola</option>
-                <option value="AAPL">Apple</option>
-                <option value="MSFT">Microsoft</option>
-                <option value="AMZN">Amazon</option>
-                <option value="TSLA">Tesla</option>
-                <option value="GOOG">Google</option>
-                <option value="FB">Facebook</option>
-                <option value="NVDA">NVIDIA</option>
-                <option value="NFLX">Netflix</option>
-                <option value="COST">Costco</option>
-                <option value="SBUX">Starbucks</option>
-                <option value="PYPL">PayPal</option>
-                <option value="ADBE">Adobe</option>
-                <option value="AMD">Advanced Micro Devices Inc</option>
-                <option value="MNST">Monster Beverage Corp</option>
-                <option value="KHC">Kraft Heinz Co/The</option>
-                <option value="LULU">Lululemon Athletica Inc</option>
-                <option value="EBAY">eBay Inc</option>
-                <option value="DLTR">Dollar Tree Inc</option>
-                <option value="PTON">Peloton Interactive Inc</option>
-                <option value="FOX">Fox Corp</option>
-                <option value="IRBT">iRobot</option>
-                <option value="FVRR">Fiverr</option>
-                <option value="BYND">Beyond Meat</option>
-                <option value="SQ">Square</option>
-            </select>
-        </div>
-            <input type="submit">
+    <form
+      id="listContainer"
+      action="race.html"
+      method="GET"
+      onsubmit="onSubmit()"
+    >
+      <div id="playerOneList">
+        <label for="symbol">Player one will choose:</label>
+        <select
+          class="form"
+          id="firstSymbol"
+          name="firstSymbol"
+          placeholder="Please select a stock"
+        >
+          <option value="PEP">Pepsi</option>
+          <option value="KO">Coca-Cola</option>
+          <option value="AAPL">Apple</option>
+          <option value="MSFT">Microsoft</option>
+          <option value="AMZN">Amazon</option>
+          <option value="TSLA">Tesla</option>
+          <option value="GOOG">Google</option>
+          <option value="FB">Facebook</option>
+          <option value="NVDA">NVIDIA</option>
+          <option value="NFLX">Netflix</option>
+          <option value="COST">Costco</option>
+          <option value="SBUX">Starbucks</option>
+          <option value="PYPL">PayPal</option>
+          <option value="ADBE">Adobe</option>
+          <option value="AMD">Advanced Micro Devices Inc</option>
+          <option value="MNST">Monster Beverage Corp</option>
+          <option value="KHC">Kraft Heinz Co/The</option>
+          <option value="LULU">Lululemon Athletica Inc</option>
+          <option value="EBAY">eBay Inc</option>
+          <option value="DLTR">Dollar Tree Inc</option>
+          <option value="PTON">Peloton Interactive Inc</option>
+          <option value="FOX">Fox Corp</option>
+          <option value="IRBT">iRobot</option>
+          <option value="FVRR">Fiverr</option>
+          <option value="BYND">Beyond Meat</option>
+          <option value="SQ">Square</option>
+        </select>
+      </div>
+      <div id="playerTwoList">
+        <label for="symbol">Player two will choose:</label>
+        <select
+          class="form"
+          id="secondSymbol"
+          name="secondSymbol"
+          placeholder="Please select a stock"
+        >
+          <option value="PEP">Pepsi</option>
+          <option value="KO">Coca-Cola</option>
+          <option value="AAPL">Apple</option>
+          <option value="MSFT">Microsoft</option>
+          <option value="AMZN">Amazon</option>
+          <option value="TSLA">Tesla</option>
+          <option value="GOOG">Google</option>
+          <option value="FB">Facebook</option>
+          <option value="NVDA">NVIDIA</option>
+          <option value="NFLX">Netflix</option>
+          <option value="COST">Costco</option>
+          <option value="SBUX">Starbucks</option>
+          <option value="PYPL">PayPal</option>
+          <option value="ADBE">Adobe</option>
+          <option value="AMD">Advanced Micro Devices Inc</option>
+          <option value="MNST">Monster Beverage Corp</option>
+          <option value="KHC">Kraft Heinz Co/The</option>
+          <option value="LULU">Lululemon Athletica Inc</option>
+          <option value="EBAY">eBay Inc</option>
+          <option value="DLTR">Dollar Tree Inc</option>
+          <option value="PTON">Peloton Interactive Inc</option>
+          <option value="FOX">Fox Corp</option>
+          <option value="IRBT">iRobot</option>
+          <option value="FVRR">Fiverr</option>
+          <option value="BYND">Beyond Meat</option>
+          <option value="SQ">Square</option>
+        </select>
+      </div>
+      <input id="button" type="submit" />
     </form>
 
-<!-- 2 -->
-    <div id="priceDisplayContainer">
-        <p>Prices of Stocks Will Display Below</p>
-        <div id="priceDisplay"></div>
+    <div id="images">
+      <img id="playerOne" width="150" src="../images/playerOne.png" />
+
+      <div>
+        <img id="coinOne" width="50" src="../images/playerOneCoin.png" />
+        <img id="coinTwo" width="50" src="../images/playerTwoCoin.png" />
+      </div>
+
+      <img id="playerTwo" width="150" src="../images/playerTwo.png" />
     </div>
-<!-- 3 -->
-    <img id="playerOne" width="200" src="../images/playerOne.png"> 
-<!-- 4 -->
-    <img id="playerTwo" width="200" src="../images/playerTwo.png">
-<!-- 5 -->
-    
-        <div> 
-            <div id="barOne"> <p> Stock 1 </p> </div>
-        </div>
-        
-            <div> 
-        <div id="barTwo"> <p> Stock 2 </p> </div>
-        </div>
-<!-- 6 -->
-    <div id="raceAgain"> 
-        <a href="index.html">Race Again</a>
+
+    <div id="priceContainer">
+      <p>Stock Prices</p>
+      <div id="priceDisplay"></div>
     </div>
-<!-- 7 -->
-    <div id="ResetButton" > 
-        <button >Play Again!</button>
+
+    <div id="barContainer">
+      <div id="barOne">
+        <p>Stock 1</p>
+      </div>
+      <div id="barTwo">
+        <p>Stock 2</p>
+      </div>
     </div>
-  
-<!-- 8 -->
-<div id="playerScores"> PlayerScores Div <p id= "PlayerOneScore"> </p>
-    <p id= "PlayerTwoScore"> </p>
-</div>
-   
+    <!-- 6 -->
+    <div id="buttons">
+      <div><a href="index.html">Race Again</a></div>
+      <div id="ResetButton">
+        <button id="button">Play Again!</button>
+      </div>
+    </div>
 
-<!-- 9 -->
+    <!-- 7 -->
 
-    
-<div id="playerOneCoin">
-    <img width="70" src="../images/playerOneCoin.png">
-</div>
+    <!-- 8 -->
+    <div id="playerScores">
+      <p>Player 1 Score: <span id="PlayerOneScore"></span></p>
+      <p>Player 2 score: <span id="PlayerTwoScore"></span></p>
+    </div>
 
-<div id="playerTwoCoin">
-    <img width="70" src="../images/playerTwoCoin.png">
-</div> 
+    <!--  -->
 
-<script>
-
-document.getElementById("ResetButton").addEventListener("click",function(){
-    location.reload();
-    return false;
-})
-</script>
-</body>
+    <script>
+      document
+        .getElementById("ResetButton")
+        .addEventListener("click", function () {
+          location.reload();
+          return false;
+        });
+    </script>
+  </body>
 </html>

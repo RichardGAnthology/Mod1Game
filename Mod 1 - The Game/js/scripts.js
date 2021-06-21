@@ -28,7 +28,7 @@ function getData(symbolsTest) {
       //making the formatted response "data"
     })
     .then((data) => {
-      console.log(data)
+      console.log(data);
       // console.log("testingFetch")
       //console.timeEnd("fetchTime")
       //displaying the data
@@ -69,15 +69,12 @@ function displayData(data) {
     console.log(stock);
 
     if (usersStockValue) {
-      console.log("printingNumbers");
       document.getElementById("priceDisplay").innerHTML +=
-        "<p>" + "$" + Math.floor(usersStockValue) + "</p>";
+        "<p>" + "Stock picked: " + " $" + Math.floor(usersStockValue) + "</p>";
     } else {
       console.log("Sorry, data not here yet.");
     }
   }
-  console.log(firstStock + "firststock");
-  console.log(secondStock + "secondstock");
 
   if (parseInt(firstStock) > parseInt(secondStock)) {
     setTimeout(function () {
@@ -86,29 +83,30 @@ function displayData(data) {
     playerOneScore++;
     console.log(playerOneScore + "player1score");
     document.getElementById("PlayerOneScore").innerText = playerOneScore;
+    document.getElementById("coinOne").style.animation = "coinWin 1s linear 7";
   } else {
     console.log(secondStock + "elsesecondstock");
     setTimeout(function () {
-      alert("Congratulations, player 2 won!");
+      alert("Congratulations, player 2 won the round!");
     }, 3000);
     playerTwoScore++;
     console.log(playerTwoScore + "player2score");
     document.getElementById("PlayerTwoScore").innerText = playerTwoScore;
+    document.getElementById("coinTwo").style.animation = "coinWin 1s linear 7";
   }
   if (playerOneScore == 2) {
     setTimeout(function () {
-      alert("Player one has won the game.");
+      alert("Player 1 has won the game.");
     }, 0);
   }
   if (playerTwoScore == 2) {
-    setTimeout(function (){
-      alert("Player two has won the game");
+    setTimeout(function () {
+      alert("Player 2 has won the game");
     }, 0);
   }
-} 
-
+}
 
 setInterval(() => {
-  document.getElementById("barOne").style.width = parseInt(firstStock) + "px";
+  document.getElementById("barOne").style.height = parseInt(firstStock) + "px";
   document.getElementById("barTwo").style.height = parseInt(secondStock) + "px";
 }, 1000);

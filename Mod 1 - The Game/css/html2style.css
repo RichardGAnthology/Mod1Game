@@ -4,64 +4,106 @@ body {
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 5px 5px;
   grid-template-areas:
-    "playerOne search search playerTwo"
-    "left left none none"
-    "coinOne test test test"
-    "coinTwo empty empty empty";
-  border-style: solid;
+    "summary search search images"
+    "priceContainer barContainer barContainer none"
+    "playerScores barContainer barContainer empty"
+    "buttons barContainer barContainer empty";
+
   height: 100vh;
   margin: 0%;
   padding: 0.5%;
   overflow: hidden;
-  background-color: rgb(0, 0, 0);
-  color: white;
+  background-color: rgb(241, 209, 173);
+  color: black;
+}
+
+#summary {
+  grid-area: summary;
+}
+
+#priceContainer {
+  grid-area: priceContainer;
 }
 
 #listContainer {
   grid-area: search;
-  border-style: solid;
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-#playerOne {
-  justify-self: end;
-  margin-top: 20%;
-  grid-area: playerOne;
-  border-style: solid;
-  max-width: max-content;
-  position: relative;
-}
-#playerTwo {
-  justify-self: start;
-  margin-top: 20%;
-  grid-area: playerTwo;
-  border-style: solid;
-  max-width: max-content;
-  position: relative;
-  transform: scaleX(-1);
+#buttons {
+  grid-area: buttons;
 }
 
 #playerScores {
-  border-style: solid;
+  grid-area: playerScores;
+}
+
+#images {
+  display: flex;
+  justify-content: space-between;
+}
+
+#playerTwo {
+  transform: scaleX(-1);
 }
 
 #barContainer {
-  border-style: solid;
+  grid-area: barContainer;
+
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  overflow: hidden;
 }
 
 #barOne {
-  background-color: chartreuse;
+  background-image: linear-gradient(rgb(76, 183, 233), rgb(248, 95, 133));
 }
 
 #barTwo {
-  background-color: blue;
+  background-image: linear-gradient(rgb(76, 183, 233), rgb(248, 95, 133));
 }
 
-a{
-  color: yellow;
+a {
+  color: rgb(0, 0, 0);
+}
+
+#coinOne {
+  position: relative;
+  right: 70%;
+}
+
+#coinTwo {
+  position: relative;
+  left: 70%;
+}
+
+@keyframes coinWin {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 10px;
+  }
+  50% {
+    top: 20px;
+  }
+  75% {
+    top: 10px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+#button {
+  background: linear-gradient(to bottom, #b49cf7 5%, #bab1ba 100%);
+  border-radius: 15px;
+  border: 1px solid #d6bcd6;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 7px 25px;
 }
