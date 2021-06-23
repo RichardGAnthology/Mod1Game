@@ -27,7 +27,6 @@ body {
 
 #listContainer {
   grid-area: search;
-
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -73,12 +72,16 @@ a {
 
 #coinOne {
   position: relative;
-  right: 70%;
+  right: 3vw;
 }
 
 #coinTwo {
   position: relative;
-  left: 70%;
+  left: 5vh;
+}
+
+#coinContainer {
+  display: flex;
 }
 
 @keyframes coinWin {

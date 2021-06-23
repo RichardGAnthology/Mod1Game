@@ -28,9 +28,6 @@ function getData(symbolsTest) {
       //making the formatted response "data"
     })
     .then((data) => {
-      console.log(data);
-      // console.log("testingFetch")
-      //console.timeEnd("fetchTime")
       //displaying the data
       displayData(data);
     }) //any errors will be presented here
@@ -41,10 +38,8 @@ function onSubmit() {
   event.preventDefault();
   //making variable symbolsTest into a joined version of the symbols picked by the user
   let symbolsTest = getSymbols().join();
-  //console.log(symbolsTest)
   // the getData function runs on the symbols picked (fetched, formatted, etc)
   getData(symbolsTest);
-  //console.log("testingonSubmit")
 }
 
 function displayData(data) {
@@ -66,7 +61,6 @@ function displayData(data) {
       //here im again pushing the data into an empty array to manipulate later
       secondStockArray.push(usersStockValue);
     }
-    console.log(stock);
 
     if (usersStockValue) {
       document.getElementById("priceDisplay").innerHTML +=
@@ -81,27 +75,28 @@ function displayData(data) {
       alert("Congratulations, player 1 won the round!");
     }, 3000);
     playerOneScore++;
-    console.log(playerOneScore + "player1score");
     document.getElementById("PlayerOneScore").innerText = playerOneScore;
     document.getElementById("coinOne").style.animation = "coinWin 1s linear 7";
   } else {
-    console.log(secondStock + "elsesecondstock");
     setTimeout(function () {
       alert("Congratulations, player 2 won the round!");
     }, 3000);
     playerTwoScore++;
-    console.log(playerTwoScore + "player2score");
     document.getElementById("PlayerTwoScore").innerText = playerTwoScore;
     document.getElementById("coinTwo").style.animation = "coinWin 1s linear 7";
   }
   if (playerOneScore == 2) {
     setTimeout(function () {
       alert("Player 1 has won the game.");
+      document.getElementById("coinOne").style.animation =
+        "coinWin 1s linear 7";
     }, 0);
   }
   if (playerTwoScore == 2) {
     setTimeout(function () {
       alert("Player 2 has won the game");
+      document.getElementById("coinTwo").style.animation =
+        "coinWin 1s linear 7";
     }, 0);
   }
 }
